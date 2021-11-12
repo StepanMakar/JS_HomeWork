@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // - Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години попадає число
+    // (в першу, другу, третю или четверту частину години).
+    let time = 2
+    if (time >=1 && time<=15) {
+        document.write(`<div>1part</div>`)
+    }
+    else if (time >= 16 && time <= 30) {
+        document.write(`<div>2part</div>`)
+    }
+    else if (time >= 31 && time <= 45) {
+        document.write(`<div>3part</div>`)
+    }
+    else if (time >= 46 && time <= 59) {
+        document.write(`<div>4part</div>`)
+    }
+
+    // - У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).
+
+    let day = 16
+    if (day >=1 && day<=10) {
+        document.write(`<div>1part</div>`)
+    }
+    else if (day >= 11 && day <= 20) {
+        document.write(`<div>2part</div>`)
+    }
+    else if (day >= 21 && day <= 31) {
+        document.write(`<div>3part</div>`)
+    }
+    // 3. У нас є змінна test, якщо  не дорівнює true, виведіть 'Вірно', інакше виведіть 'Неправильно'.
+    //     Перевірте роботу скрипта при test, що дорівнює true, false. Напишіть два варіанти скрипта - з коротким записом(тернаркою)
+
+    let test = (!!`stuff`)
+    console.log(test)
+    if (test == true) {document.write('<div>Неправильно</div>')}
+    else {document.write('<div>Вірно</div>')}
+
+    let test1 = (!!`think`) ? '<div>Неправильно,</div>' : '<div>Вірно</div>';
+    document.write(test1)
+    let test2 = (!!0) ? 'Неправильно' : 'правильно';
+    document.write(test2)
+
+    // 4. // - Якщо змінна a не дорівнює нулю, виведіть 'Вірно', інакше виведіть 'Невірно'. Перевірте  скрипт при a, що дорівнює 1, 0, -3
+
+    let a = 0
+    if (a != 0) {document.write('<div>Вірно</div>')} else {document.write('<div>Невірно</div>')}
+
+</script>
+</body>
+</html>
