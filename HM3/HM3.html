@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HM3</title>
+</head>
+<body>
+<script>
+
+    // 1. --створити масив з:
+    //     - з 5 числових значень
+    // - з 5 стічкових значень
+    // - з 5 значень стрічкового, числового та булевого типу
+    // - та вивести його в консоль
+
+    let arraynnumber = [ 1, 2, 3, 4, 5]
+    console.log(arraynnumber[0])
+    console.log(arraynnumber[1])
+    console.log(arraynnumber[2])
+    console.log(arraynnumber[3])
+    console.log(arraynnumber[4])
+    let arraystring = [`one`, `two`, `three`, `four`, `five`]
+    console.log(arraystring[0])
+    console.log(arraystring[1])
+    console.log(arraystring[2])
+    console.log(arraystring[3])
+    console.log(arraystring[4])
+    let arraymix = [1, `two`, true, 4, false]
+    console.log(arraymix[0])
+    console.log(arraymix[1])
+    console.log(arraymix[2])
+    console.log(arraymix[3])
+    console.log(arraymix[4])
+    // 2.-- Створити пустий масив. Наповнити його будь-якими значеннями звертаючись до конкретного індексу. Вивести в консоль
+    let arrempty = [];
+    arrempty[0] = `Hogwarts1`
+    arrempty[1] = `Hogwarts2`
+    arrempty[2] = `Hogwarts3`
+    arrempty[3] = `Hogwarts4`
+    arrempty[4] = `Hogwarts5`
+    console.log(arrempty)
+
+
+    // 3.- За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині
+    for (let i = 0; i < 10; i++) {
+    document.write(`<div>`)
+    document.write(`WinterComing`)
+    document.write(`</div>`)
+    // 4. - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
+    }for (let i = 0; i < 10; i++) {
+        document.write(`<div>`)
+        document.write(`WinterComing` + ` ` + i)
+        document.write(`</div>`)
+    }
+    // 5. - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
+    let i = 0;
+    while( i < 20) {
+        i++
+        document.write(`<h1>DC</h1>`)
+    }
+    // 6. За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
+    let i2 = 0;
+    while( i2 < 20) {
+        i2++
+        document.write(`<h1>DC ${i2} </h1>`)
+    }
+    // 7.- Створити масив з 10 числових елементів. Вивести в консоль всі його елементи в циклі.
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    for (let j = 0; j < numbers.length; j++) {
+        const numberElement = numbers[j];
+        console.log(numberElement)
+    }
+    // 8. - Створити масив з 10 строкрових елементів. Вивести в консоль всі його елементи в циклі.
+    let string =[`one`, `two`, `three`, `four`, `five`, `six`, `seven`, `eight`, `nine`, `ten`]
+    for (const string1 of string) {
+        console.log(string1)
+    }
+    // 9.Створити масив з 10 елементів будь-якого типу. Вивести в консоль всі його елементи в циклі.
+    let mixtype =[1, 2, 3, 4, 5, `six`, `seven`, `eight`, `nine`, `ten`]
+    let l = 0;
+    while(l < mixtype.length) {
+        let mix = mixtype[l]
+        console.log(mix)
+        l++
+    }
+    // 10. // - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки булеві елементи
+
+    let stringbool = [`winter`, true, `summer`, false, `spring`, !``, 7, 6, 8]
+    for (let j = 0; j < stringbool.length; j++) {
+        const stringboolElement = stringbool[j];
+        if (typeof stringboolElement === "boolean") {
+            console.log(stringboolElement)
+        }
+    }
+    // 11. - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки числові елементи
+    let stringbool2 = [`winter`, true, `summer`, false, `spring`, !``, 7, 6, 8]
+    for (let j = 0; j < stringbool2.length; j++) {
+        const stringboolElement2 = stringbool[j];
+        if (typeof stringboolElement2 === "number") {
+            console.log(stringboolElement2)
+        }
+    }
+    // 12. - Створити масив з 10 елементів числового, стрічкового і булевого типу. За допомогою if та typeof вивести тільки рядкові елементи
+    let stringbool3 = [`winter`, true, `summer`, false, `spring`, !``, 7, 6, 8]
+    for (let j = 0; j < stringbool3.length; j++) {
+        const stringboolElement3 = stringbool[j];
+        if (typeof stringboolElement3 === "string") {
+            console.log(stringboolElement3)
+        }}
+
+    // 13.Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення до конкретних індексів. Вивести в консоль всі його елементи в циклі.
+    let emptymix = []
+    emptymix[0] = 43;
+    emptymix[1] = `Sacura`;
+    emptymix[2] = false;
+    emptymix[3] = 21;
+    emptymix[4] = 17;
+    emptymix[5] = `Saske`;
+    emptymix[6] = 3;
+    emptymix[7] = `Naruto`;
+    emptymix[8] = true;
+    emptymix[9] = 777;
+    for (let j = 0; j < emptymix.length; j++) {
+        const emptymix1 = emptymix[j];
+        console.log(emptymix1)
+
+    }
+    // 14. - Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+    for (let j = 0; j < 10; j++) {
+        console.log(j)
+        document.write(j)
+
+    }
+    // 15.Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+    for (let j = 0; j < 100; j++) {
+        document.write(j)
+
+    }
+    // 16.- Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
+    for (let j = 0; j < 100; j += 2) {
+        document.write(`<div>`)
+        document.write(j)
+            document.write(`<div>`)
+    }
+    // 17.- Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
+    for (let j = 0; j < 100; j++) {
+        if (j % 2 === 0) {
+        console.log(j)
+            document.write(`<div>`)
+            document.write(j)
+            document.write(`<div>`)}
+    }
+    // 18. Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
+    for (let j = 0; j < 100; j++) {
+        if (j % 2 != 0) {
+            console.log(j)
+            document.write(`<div>`)
+            document.write(j)
+            document.write(`<div>`)}
+    }
+</script>
+</body>
+</html>
