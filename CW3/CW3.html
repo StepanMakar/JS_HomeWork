@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CW3</title>
+</head>
+<body>
+<script>
+    // зробити масив з 10 чисел [2,17,13,6,22,31,45,66,100,-18]та:
+    // 1. перебрати його циклом while
+    let arnumber = [2,17,13,6,22,31,45,66,100,-18]
+    for (let i = 0; i < arnumber.length; i++) {
+        const arnumberElement = arnumber[i];
+        console.log(arnumberElement)
+
+    }
+    //     2. перебрати його циклом for
+    let arnumber2 = [2,17,13,6,22,31,45,66,100,-18]
+    let i=0
+    while (i < arnumber2.length) {
+
+        console.log(arnumber2 [i])
+        i++
+    }
+    //     3. перебрати циклом while та вивести  числа тільки з непарним індексом
+    let arnumber3 = [2,17,13,6,22,31,45,66,100,-18]
+    let j = 0
+    while(j < arnumber3.length)
+    {
+
+        if ( j % 2 != 0 ){
+            console.log(arnumber3 [j])
+        }
+        j++
+    }
+    // 4. перебрати циклом for та вивести  числа тільки з непарним індексом
+    let arnumber4 = [2,17,13,6,22,31,45,66,100,-18]
+    for (let k = 0; k < arnumber4.length; k++) {
+        const arnumber4Element = arnumber4[k];
+        if (k % 2 != 0) {
+            console.log(arnumber4Element)
+        }
+
+    }
+    // 5. перебрати циклом while та вивести  числа тільки парні  значення
+    let arnumber5 = [2,17,13,6,22,31,45,66,100,-18]
+    let k = 0;
+    while ( k < arnumber5.length) {
+        if (arnumber5[k] % 2 === 0) {
+            console.log(arnumber5[k])
+        }
+        k++
+
+    }
+    // 6. перебрати циклом for та вивести  числа тільки парні  значення
+    let arnumber6 = [2,17,13,6,22,31,45,66,100,-18]
+    for (let l = 0; l < arnumber6.length; l++) {
+        const arnumber6Element = arnumber6[l];
+        if ( arnumber6Element % 2 === 0) {
+            console.log(arnumber6Element)
+        }
+
+    }
+    // 7. замінити кожне число кратне 3 на слово "okten"
+    let arnumber7 = [2,17,13,6,22,31,45,66,100,-18]
+    for (let l = 0; l < arnumber7.length; l++) {
+        let arnumber7Element = arnumber7[l];
+        if (arnumber7Element % 3 === 0) {
+            arnumber7Element = `okten`
+        }
+        console.log(arnumber7Element)
+
+    }
+    // 8. вивести масив в зворотньому порядку.
+    let arnumber8 = [2,17,13,6,22,31,45,66,100,-18]
+    for (let l = arnumber8.length - 1; l >= 0; l--) {
+        const arnumber8Element = arnumber8[l];
+        console.log(arnumber8Element)
+    }
+    // 9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
+
+    // 10/ перебрати його циклом while zvorot
+    let arnumber10 = [2,17,13,6,22,31,45,66,100,-18]
+    let z = arnumber10.length-1;
+    while (z >= 0) {
+
+        console.log(arnumber10[z])
+        z--
+    }
+    // 11.перебрати циклом while та вивести  числа тільки з непарним індексом zvorot
+    let arnumber11 = [2,17,13,6,22,31,45,66,100,-18]
+    let x = arnumber11.length - 1
+    while(x >= 0)
+    {
+
+        if ( x % 2 != 0 ){
+            console.log(arnumber11 [x])
+        }
+        x--
+    }
+    // 12. перебрати циклом for та вивести  числа тільки з непарним індексом zvorot
+    let arnumber12 = [2,17,13,6,22,31,45,66,100,-18]
+    for (let k = arnumber12.length - 1 ; k >= 0; k--) {
+        const arnumber12Element = arnumber12[k];
+        if (k % 2 != 0) {
+            console.log(arnumber12Element)
+        }
+
+    }
+    // 13. перебрати циклом while та вивести  числа тільки парні  значення zvorot
+    let arnumber13 = [2,17,13,6,22,31,45,66,100,-18]
+    let c = arnumber13.length - 1;
+    while ( c >= 0) {
+        if (arnumber13[c] % 2 === 0) {
+            console.log(arnumber13[c])
+        }
+        c--
+
+    }
+    // 14. перебрати циклом for та вивести  числа тільки парні  значення zvorot
+    let arnumber14 = [2,17,13,6,22,31,45,66,100,-18]
+    for (let l = arnumber14.length - 1; l >= 0; l--) {
+        const arnumber14Element = arnumber14[l];
+        if ( arnumber14Element % 2 === 0) {
+            console.log(arnumber14Element)
+        }}
+    // 15. замінити кожне число кратне 3 на слово "okten" zvorot
+    let arnumber15 = [2,17,13,6,22,31,45,66,100,-18]
+    for (let l = arnumber15.length - 1; l >= 0; l--) {
+        let arnumber15Element = arnumber15[l];
+        if (arnumber15Element % 3 ===0) {
+            arnumber15Element = `okten`
+        }
+        console.log(arnumber15Element)
+    }
+
+
+
+</script>
+</body>
+</html>
