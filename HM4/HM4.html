@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HM4</title>
+</head>
+<body>
+<script>
+    // 1. створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
+    function s_rect (a,b){
+        let result
+        result = a * b
+        return result
+    }
+    s_rect(5,7)
+    console.log( s_rect(5,7))
+
+   // 2. створити функцію яка обчислює та повертає площу кола з радіусом r
+    function s_circle (r){
+        return Math.PI * r^2
+    }
+    console.log(s_circle(10))
+    // 3.створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
+  function s_cylinder(h_c,r_c){
+         let result_c = (2 * Math.PI * h_c * r_c)
+      return result_c.toFixed()
+  }
+  console.log(s_cylinder(10,5))
+    // 4.створити функцію яка приймає масив та виводить кожен його елемент
+    function arrays(number_element){
+         for (let item_a of number_element)
+            console.log(item_a)
+    }
+    // 5. створити функцію яка створює параграф з текстом. Текст задати через аргумент
+    function text_p(text_p){
+        document.write(`<p>${text_p}</p>`)
+    }
+    text_p(`Hello_Okten`)
+    // 6.- створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
+    function list(text_l){
+        document.write(
+            `<ul>
+                <li>${text_l}</li>
+                <li>${text_l}</li>
+                <li>${text_l}</li>
+            </ul>`
+        )
+    }
+    list(`Wish`)
+
+// 7.- створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
+
+    function list_ul(text,size_l){
+        document.write(`<ul>`)
+        for (let i = 0; i < size_l; i++) {
+            document.write(`<li>${text}</li>`)
+
+        }
+        document.write(`</ul>`)
+    }
+    list_ul(`HappyNewYear`,7)
+// 8.створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+    function array2(arr){
+        for (const arrElement of arr) {
+            document.write(`<ul>`)
+            document.write(`<li>${arrElement}</li>`)
+            document.write(`</ul>`)
+        }
+    }
+    array2([3,false, true,7])
+    // 9.- створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
+  function array3(arr){
+      for (const user of arr) {
+          document.write(`<div>${user.id} - ${user.surname} - ${user.age}</div>`)
+      }
+  }
+
+    let simpsons = [
+        {
+            id: 'Bart',
+            surname: 'Simpson',
+            age: 10,
+        },
+        {
+            id: 'Homer',
+            surname: 'Simpson',
+            age: 40,
+        },
+        {
+            id: 'Marge',
+            surname: 'Simpson',
+            age: 38,
+        },
+        {
+            id: 'Lisa',
+            surname: 'Simpson',
+            age: 9,
+        },
+        {
+            id: 'Maggie',
+            surname: 'Simpson',
+            age: 1,
+        }
+    ]
+    array3(simpsons)
+
+</script>
+
+</body>
+</html>
