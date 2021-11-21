@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CW4</title>
+</head>
+<body>
+<script>
+// 1.- створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)
+  function min_number(a,b,c){
+      if ( a < c && a < b){
+          document.write(a+ `<br>`)
+      }
+      else if ( b < a && b < c){
+          document.write(b+ `<br>`)
+      }
+      else if ( c < a && c < b){
+          document.write(c+ `<br>`)
+      }
+      else {
+          document.write(`Error`)
+      }
+  }
+  min_number(25,18,27)
+// 2.- створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
+ function max_number(a,b,c){
+     if ( a > c && a > b){
+         document.write(a+ `<br>`)
+     }
+     else if ( b > a && b > c){
+         document.write(b+ `<br>`)
+     }
+     else if ( c > a && c > b){
+         document.write(c + `<br>`)
+     }
+     else {
+         document.write(`Error`+ `<br>`)
+
+ }
+ }
+ max_number(25,18,30)
+// 3.створити функцію яка повертає найбільше число з масиву
+function arr_max(arr){
+      let max = arr[0]
+    for (const max1 of arr) {
+        if(max1 > max){
+            max = max1;
+        }
+
+    }
+    return max
+}
+ arrs=[23,14,66,78,191,2,56,3]
+console.log(arr_max(arrs))
+// 4. створити функцію яка повертає найменьше число з масиву
+ function arr_min(arr){
+     let min = arr[0]
+     for (const max1 of arr) {
+         if(max1 < min){
+             min = max1;
+         }
+
+     }
+     return min
+ }
+console.log(arr_min(arrs))
+// 5. створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його.
+function summ(arr){
+      let result = 0;
+    for (const arrElement of arr) {
+        result = result + arrElement
+    }
+    return result
+}
+console.log(summ(arrs))
+
+// 6.- створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.
+
+function middle_summ(arr){
+    let result = 0;
+    for (const arrElement of arr) {
+        result = (result + arrElement)
+    }
+    result_mid =result/arr.length
+    return result_mid.toFixed()
+}
+console.log(middle_summ(arrs))
+// <!--7.- створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);-->
+
+ function min_max(arr){
+      min = arr[0]
+     max = arr[0]
+     for (const arrElement of arr) {
+         if(arrElement < min){
+             min = arrElement
+         }
+         if (arrElement > max){
+             max = arrElement
+         }
+
+     }
+     console.log(max)
+     return min
+ }
+console.log(min_max(arrs))
+
+// 8.- створити функцію яка заповнює масив рандомними числами
+function random(size){
+    let array = []
+    for (let i = 0; i < size; i++) {
+         array[i] = Math.round(Math.random() * 100);
+    }
+    return array
+
+}
+console.log(random(8))
+// 9.- створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit. limit - аргумент, який характеризує кінцеве значення діапазону.
+function random_limit(limit,size){
+      let array = []
+    for (let i = 0; i < size; i++) {
+            array[i] = Math.round(Math.random() * limit);
+
+    }
+    return array
+}
+console.log(random_limit(10,9))
+// 10.- Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1]. [23,14,66,78,191,2,56,3]
+    function inverse(arr){
+      inverse = []
+        for (let i = arr.length - 1; i >= 0; i--) {
+            const inverseElement = arr[i];
+            inverse.push(inverseElement)
+        }
+        return inverse
+    }
+console.log(inverse(arrs))
+
+
+
+</script>
+
+
+
+</body>
+</html>
