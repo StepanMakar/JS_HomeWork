@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CW5</title>
+</head>
+<body>
+<script>
+    // Всі функції повинні бути описані стрілочним типом!!!!
+    //     - створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)
+    let min_number = (a,b,c) => {
+        if ( a < c && a < b){
+            document.write(a+ `<br>`)
+        }
+        else if ( b < a && b < c){
+            document.write(b+ `<br>`)
+        }
+        else if ( c < a && c < b){
+            document.write(c+ `<br>`)
+        }
+        else {
+            document.write(`Error`)
+        }
+    };
+    min_number(45,7,12);
+    // - створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
+    let max_number = (a,b,c) => {
+        if ( a > c && a > b){
+            document.write(a+ `<br>`)
+        }
+        else if ( b > a && b > c){
+            document.write(b+ `<br>`)
+        }
+        else if ( c > a && c > b){
+            document.write(c + `<br>`)
+        }
+        else {
+            document.write(`Error`+ `<br>`)
+
+        }
+    };
+    max_number(34,77,2)
+    // - створити функцію яка повертає найбільше число з масиву
+    let max_arr_number = (arr) => {
+        let max = arr[0]
+        for (const max1 of arr) {
+            if (max1 > max) {
+                max =max1
+            }
+        }
+        return max
+    };
+    let test_arr =[12,23,43,45,3,5,7];
+    console.log(max_arr_number(test_arr));
+    // - створити функцію яка повертає найменьше число з масиву
+    let min_arr_number = (arr) => {
+        min = arr[0]
+        for (const min1 of arr) {
+            if (min1 < min ) {
+                min = min1
+            }
+        }
+        return min
+    };
+    console.log(min_arr_number(test_arr));
+    // - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
+    let summ_arr = (arr) => {
+        result = 0
+        for (const arrElement of arr) {
+            result = result + arrElement
+        }
+        return result
+    };
+    console.log(summ_arr(test_arr));
+    // - створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.
+    let middle_arr = (arr) => {
+        result = 0
+        for (const arrElement of arr) {
+            result = (result + arrElement)
+        }
+        result_middle = result / arr.length
+        return result_middle.toFixed()
+    };
+    console.log(middle_arr(test_arr));
+    // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
+    let min_max_arr = (arr) => {
+        min = arr[0]
+        max = arr[0]
+        for (const arrElement of arr) {
+            if(arrElement < min){
+                min = arrElement
+            }
+            if (arrElement > max){
+                max = arrElement
+            }
+
+        }
+        console.log(max)
+        return min
+    };
+    console.log(min_max_arr(test_arr))
+
+    // - створити функцію яка заповнює масив рандомними числами
+    let randomizer = (size) => {
+        let array = []
+        for (let i = 0; i < size; i++) {
+            array[i] = Math.round(Math.random() * 100);
+        }
+        return array
+    };
+    console.log(randomizer(7));
+
+
+    // - створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit. limit - аргумент, який характеризує кінцеве значення діапазону.
+    let randomizer_limit = (size,limit) => {
+        let array = []
+        for (let i = 0; i < size; i++) {
+            array[i] = Math.round(Math.random() * limit);
+        }
+        return array
+    };
+    console.log(randomizer_limit(7,34));
+    // - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
+    let inverse_arr = (arr) => {
+        inverse = []
+        for (let i = arr.length - 1; i >= 0; i--) {
+            const inverseElement = arr[i];
+            inverse.push(inverseElement)
+        };
+        return inverse
+    }
+
+console.log(inverse_arr(test_arr))
+
+
+
+</script>
+</body>
+</html>
