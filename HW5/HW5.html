@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW5</title>
+</head>
+<body>
+<script>
+    // Всі функції повинні бути описані стрілочним типом!!!!
+    //     - створити функцію яка обчислює та повертає площу прямокутника висотою
+    let s_rectangle = (a,b) => a * b;
+    console.log(s_rectangle(5,10));
+    // - створити функцію яка обчислює та повертає площу кола
+    let s_circle = (r) => Math.PI * r^2;
+    console.log(s_circle(7));
+    // - створити функцію яка обчислює та повертає площу циліндру
+    let s_cylinder = (h_c,r_c) => (2 * Math.PI * h_c * r_c).toFixed();
+    console.log(s_cylinder(7,10));
+    // - створити функцію яка приймає масив та виводить кожен його елемент
+    let arr_element = (arr) => {
+        for (const arrElement of arr) {
+            console.log(arrElement)
+        }};
+    arr_element([1,5,75,90,21,3,27]);
+    // - створити функцію яка  створює параграф з текстом. Текст задати через аргумент
+    let paragraph = (some_text)=> {
+        document.write(`<p>${some_text}<p/>`)
+    };
+    paragraph(`Hello guys`);
+    paragraph(`How you feel today`);
+    // - створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
+    let list = (text_li) => {
+        document.write(`<ul>
+            <li>${text_li}</li>
+            <li>${text_li}</li>
+            <li>${text_li}</li>
+        </ul>`)
+    };
+    list(`Netflix`);
+    // - створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
+    let list_nums = (text,b) => {
+        document.write(`<ul>`)
+        for (let i = 0; i < b; i++) {
+            document.write(`<li>${text}</li>`)
+        }
+        document.write(`</ul>`)
+    };
+    list_nums(`PanicAtTheDisco`,7);
+    // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+    let simple_arr = (some_arr) => {
+        document.write(`<ul>`)
+        for (const someArrElement of some_arr) {
+            document.write(`<li>${someArrElement}</li>`)
+        }
+        document.write(`</ul>`)
+    };
+    simple_arr([1,`Hi`, false, 23, `Deer`]);
+    // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
+    let arrive_object = (arr) => {
+        for (const arrElement of arr) {
+            document.write(`<div>${arrElement.id} --  ${arrElement.surname} -- ${arrElement.age}</div>`)
+        }
+    };
+    let simpsons = [
+        {
+            id: 'Bart',
+            surname: 'Simpson',
+            age: 10,
+        },
+        {
+            id: 'Homer',
+            surname: 'Simpson',
+            age: 40,
+        },
+        {
+            id: 'Marge',
+            surname: 'Simpson',
+            age: 38,
+        },
+        {
+            id: 'Lisa',
+            surname: 'Simpson',
+            age: 9,
+        },
+        {
+            id: 'Maggie',
+            surname: 'Simpson',
+            age: 1,
+        }
+    ];
+    arrive_object(simpsons);
+</script>
+</body>
+</html>
