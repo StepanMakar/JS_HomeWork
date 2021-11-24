@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Additional5</title>
+</head>
+<body>
+<script>
+//     - Дано натуральное число n. Выведите все числа от 1 до n.
+function to_n(n) {
+    if (n >= 1) {
+        to_n(n - 1);
+        console.log(n);
+
+    }
+}
+to_n(5)
+
+
+//     - Даны два целых числа A и В . Выведите все числа от A до B включительно, в порядке возрастания, если A < B, или в порядке убывания в противном случае.
+    function range(a,b) {
+    if (a <= b) {
+        console.log(a)
+        if (a !== b){
+            range(a + 1, b)
+        }
+    }
+     else  {
+         console.log(a)
+        range(a - 1, b)
+
+    }
+    }
+range(5,1)
+
+//     -   функція Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
+//   EXAMPLE:
+//   foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
+//   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
+//   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
+let substitute = (arr,i) => {
+    for (let j = 0; j < arr.length; j++) {
+        if ( j == i) {
+            let subst = arr[j]
+            arr[j] = arr[j + 1]
+            arr[j + 1] = subst
+        }
+    }
+    console.log(arr)
+}
+substitute([1,2,3,4,5,], 2)
+
+// - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
+// Двожина масиву від 2 до 100
+// EXAMPLE:
+// [1,0,6,0,3] => [1,6,3,0,0]
+// [0,1,2,3,4] => [1,2,3,4,0]
+// [0,0,1,0]   => [1,0,0,0]
+ function zero_go_on (arr) {
+    let z = 0
+     for (let i = 0; i < arr.length; i++) {
+         if (arr[i] !== 0) {
+             let numb = arr[i];
+             arr[i] = arr[z];
+             arr[z] = numb;
+             z++
+         }
+     }
+     return arr
+ }
+console.log(zero_go_on([1,0,6,0,3]))
+
+
+</script>
+</body>
+</html>
