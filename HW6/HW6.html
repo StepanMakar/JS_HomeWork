@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW6</title>
+</head>
+<body>
+<script>
+    // - Знайти та вивести довижину настипних стрінгових значень
+    // 'hello world', 'lorem ipsum', 'javascript is cool'
+    let str1 = 'hello world'
+    let str2 = 'lorem ipsum'
+    let str3 = 'javascript is cool'
+    console.log(str1.length)
+    console.log(str2.length)
+    console.log(str3.length)
+    // - Перевести до великого регістру наступні стрінгові значення
+    // 'hello world', 'lorem ipsum', 'javascript is cool'
+    console.log(str1.toUpperCase())
+    console.log(str2.toUpperCase())
+    console.log(str3.toUpperCase())
+    // - Перевести до нижнього регістру настипні стрінгові значення
+    // 'HELLO WORLD', 'LOREM IPSUM', 'JAVASCRIPT IS COOL'
+    let str1big = 'HELLO WORLD'
+    let str2big = 'LOREM IPSUM'
+    let str3big = 'JAVASCRIPT IS COOL'
+    console.log(str1big.toLowerCase())
+    console.log(str2big.toLowerCase())
+    console.log(str3big.toLowerCase())
+
+    // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
+    let dirty = ' dirty string   '
+    console.log(dirty.trim())
+
+    // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
+    //     let str = 'Каждый охотник желает знать';
+    // let arr = stringToarray(str);
+    // document.writeln(arr); // ['Каждый', 'охотник', 'желает', 'знать']
+    let stringToArray  = SomeString => {
+        console.log(SomeString.split(` `))
+    }
+    stringToArray ('Каждый охотник желает знать')
+    // - Напишіть функцію delete_characters(str, length), яка повертає підрядок, що складається із зазначеної кількості символів.
+    //     let str = 'Каждый охотник желает знать';
+    // document.writeln(delete_characters(str, 7)); // Каждый
+     let delete_characters = (str, lenght) => {
+        console.log(str.substr(0,lenght))
+     }
+    delete_characters('Каждый охотник желает знать', 7)
+
+    // - Напишіть функцію insert_dash(str), яка приймає рядок str як аргумент і вставляє тире (-) між словами. При цьому всі символи рядка необхідно перевести у верхній регістр.
+    //     let str = "HTML JavaScript PHP";
+    // document.writeln(insert_dash(str)); // 'HTML-JAVASCRIPT-PHP'
+    let insert_dash = str => {
+        console.log(str.toUpperCase().replaceAll(` `, `-`))
+    }
+    insert_dash("HTML JavaScript PHP")
+    // - Напишіть функцію, яка приймає рядок як аргумент і перетворює регістр першого символу рядка з нижнього регістру у верхній.
+    let toUpper = (some_str) =>{
+        return some_str[0].toUpperCase() + some_str.slice(1)
+    }
+    console.log(toUpper('каждый охотник желает знать'))
+    // - Напишіть функцію capitalize(str), яка повертає рядок, у якому кожне слово починається з великої літери.
+    let capitalize = (sentence) =>{
+        return  sentence.split(` `).map(element=>element.charAt(0).toUpperCase() + element.slice(1)).join(` `)
+    }
+    console.log(capitalize(`каждый охотник желает знать`))
+</script>
+</body>
+</html>
