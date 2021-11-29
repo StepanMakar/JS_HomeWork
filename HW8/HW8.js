@@ -32,5 +32,5 @@ console.log(classname);
 let text5 = document.getElementsByClassName(`fc_rules`)
 for (const text of text5) {
     text.style.color = `white`
-};
+}
 // PS я щось завдання не так зрозумів і тому поміняв трохи по іншому кольори, але суть ніби та сама
