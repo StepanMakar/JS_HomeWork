@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW7</title>
+</head>
+<body>
+<script>
+    // - Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
+    function user(id,name,surname,email,phone) {
+
+            this.id = id;
+            this.name = name;
+            this.surname = surname;
+            this.email = email;
+            this.phone = phone;
+        }
+
+
+    // створити пустий масив, наповнити його 10 об'єктами new User(....)
+   let AllUser = [
+       new user(23, `Calvin`, `Jekson`, `dgfsdsd@Gmail.com`, 380679873480),
+       new user(43, `Karina`, `Fedorenko`, `polandia@Gmail.com`, 380679871767),
+       new user(2, `Oleg`, `Oleksyn`, `dfvx@Gmail.com`, 380679878080),
+       new user(14, `Stepan`, `Makar`, `stepan.lisnov@Gmail.com`, 380679873333),
+       new user(48, `Anton`, `Sharan`, `wersa@Gmail.com`, 380679878945),
+       new user(34, `Ruslan`, `Kovel`, `popter@Gmail.com`, 380679871258),
+       new user(20, `Artur`, `Pirozhkow`, `iceGeneral@Gmail.com`, 380679870002),
+       new user(18, `Lia`, `Grey`, `50Shadow.com`, 380679871735),
+       new user(10, `Harry`, `Potter`, `Tom_Sucks@Gmail.com`, 380679873568),
+       new user(7, `Albus`, `Dambldor`, `wizzard@gmail.com`, 380679873790),
+   ];
+    console.log(AllUser)
+    // - Взяти масив з  User[] з попереднього завдання, та відфільтрувати , залишивши тільки об'єкти з парними id (filter)
+    let FilterUser = AllUser.filter(
+        item => {if (item.id % 2 === 0) {
+            return item
+    }}
+    )
+    console.log(FilterUser)
+    // - Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)
+    let SortUser = AllUser.sort((a,b) => a.id - b.id)
+    console.log(SortUser)
+    // - створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
+    class client {
+        constructor(id, name, surname, email, phone, order) {
+            this.id = id;
+            this.name = name;
+            this.surname = surname;
+            this.email = email;
+            this.phone = phone;
+            this.order = order;
+        }
+
+    }
+    // створити пустий масив, наповнити його 10 об'єктами Client
+    let AllClient = [
+        new client(23, `Calvin`, `Jekson`, `dgfsdsd@Gmail.com`, 380679873480, [`tennis`,`rocket`]),
+        new client(43, `Karina`, `Fedorenko`, `polandia@Gmail.com`, 380679871767, [`boll`]),
+        new client(2, `Oleg`, `Oleksyn`, `dfvx@Gmail.com`, 380679878080, [`pencil`, `leptop`, `mouse`, `keyboard`]),
+        new client(14, `Stepan`, `Makar`, `stepan.lisnov@Gmail.com`, 380679873333,[`keyboard`]),
+        new client(48, `Anton`, `Sharan`, `wersa@Gmail.com`, 380679878945,[`watch`,`applewatch`, `airpods`,`router`,`appleiphone`]),
+        new client(34, `Ruslan`, `Kovel`, `popter@Gmail.com`, 380679871258,[`airpods`,`router`,`appleiphone`]),
+        new client(20, `Artur`, `Pirozhkow`, `iceGeneral@Gmail.com`, 380679870002, [`watch`,`applewatch`, `airpods`,`router`,`appleiphone`,`tennis`,`rocket`]),
+        new client(18, `Lia`, `Grey`, `50Shadow.com`, 380679871735, [`sportcar`]),
+        new client(10, `Harry`, `Potter`, `Tom_Sucks@Gmail.com`, 380679873568,[`airpods`,`router`,`appleiphone`]),
+        new client(7, `Albus`, `Dambldor`, `wizzard@gmail.com`, 380679873790,[`leptop`]),
+    ]
+    console.log(AllClient)
+    // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
+let SortClient = AllClient.sort((a,b) => a.order.length - b.order.length)
+    console.log(SortClient)
+</script>
+</body>
+</html>
