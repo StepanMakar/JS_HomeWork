@@ -26,8 +26,10 @@ text2.style.color = `blue`;
 // -- отримати весь список класів елемента з id=rules і вивести їх в console.log
 let text4 = document.getElementById(`rules`);
 console.log(text4);
-let classname = text4.className;
+let classname = text4.classList;
+let classname2 = text4.className
 console.log(classname);
+console.log(classname2);
 // -- поміняти колір тексту у всіх елементів fc_rules на червоний
 let text5 = document.getElementsByClassName(`fc_rules`)
 for (const text of text5) {
