@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CW7</title>
+</head>
+<body>
+<script>
+    // <!-- - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:-->
+    // <!--&#45;&#45; drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`-->
+    // <!--&#45;&#45; info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`-->
+    // <!--&#45;&#45; increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed-->
+    // <!--&#45;&#45; changeYear (newValue) - змінює рік випуску на значення newValue-->
+    // <!--&#45;&#45; addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car-->
+    function car(model, producer, GraduateYear, MaxSpeed, volume) {
+        this.model = model;
+        this.producer = producer;
+        this.GraduateYear = GraduateYear;
+        this.MaxSpeed = MaxSpeed;
+        this.volume = volume;
+        this.drive = function () {
+            console.log(`їдемо зі швидкістю ${this.MaxSpeed} на годину`);
+        };
+        this.NewSpeed = function (increaseMaxSpeed) {
+            this.MaxSpeed = this.MaxSpeed + increaseMaxSpeed
+        };
+        this.ChangeGY = function (NewYear) {
+            this.GraduateYear = NewYear
+        };
+        this.AddDriver = function (driver) {
+            this.driver = driver
+        };
+        this.info = function () {
+            console.log(`Information: Model - ${this.model}, Producer - ${this.producer}, GraduateYear - ${this.GraduateYear}, MaxSpeed - ${this.MaxSpeed},
+             Volume - ${this.volume}`)
+        }
+    };
+    let BMW = new car(`BMW X5`, `Germane`, 2016, 276, 3);
+    console.log(BMW);
+
+    BMW.drive();
+    BMW.info();
+    BMW.NewSpeed(300);
+    BMW.ChangeGY(2018);
+    BMW.AddDriver(`Stepan`);
+    BMW.info();
+    console.log(BMW);
+    // <!-- - (Те саме, тільки через клас)-->
+    // <!--Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:-->
+    // <!--&#45;&#45; drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`-->
+    // <!--&#45;&#45; info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`-->
+    // <!--&#45;&#45; increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed-->
+    // <!--&#45;&#45; changeYear (newValue) - змінює рік випуску на значення newValue-->
+    // <!--&#45;&#45; addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car-->
+    class carTwo {
+        constructor(model, producer, GraduateYear, MaxSpeed, volume) {
+            this.model = model;
+            this.producer = producer;
+            this.GraduateYear = GraduateYear;
+            this.MaxSpeed = MaxSpeed;
+            this.volume = volume;
+        }
+
+        drive() {
+            console.log(`їдемо зі швидкістю ${this.MaxSpeed} на годину`);
+        };
+
+        NewSpeed(increaseMaxSpeed) {
+            this.MaxSpeed = this.MaxSpeed + increaseMaxSpeed
+        };
+
+        ChangeYear(NewYear) {
+            this.GraduateYear = NewYear
+        };
+
+        addDriver(driver) {
+            this.driver = driver
+        };
+
+        info() {
+
+            console.log(`Information: Model - ${this.model}, Producer - ${this.producer}, GraduateYear - ${this.GraduateYear}, MaxSpeed - ${this.MaxSpeed},
+             Volume - ${this.volume}`)
+
+        };
+
+    };
+    let BMW2 = new carTwo(`BMW X5`, `Germane`, 2016, 276, 3);
+    console.log(BMW2);
+    BMW2.drive();
+    BMW2.info();
+    BMW2.NewSpeed(50);
+    BMW2.ChangeYear(2020);
+    BMW2.addDriver(`Stas`);
+    BMW2.info();
+    console.log(BMW2);
+
+    // <!-- -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.-->
+    // <!--Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.-->
+    // <!--За допомоги циклу знайти яка попелюшка повинна бути з принцом.-->
+    // <!--Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку-->
+    function MainPopelushka(name,age,size){
+        this.name = name;
+        this.age = age;
+        this.size = size;
+    }
+    let ArrPopelushka = [
+        new MainPopelushka(`Popelushka1`, 23, 35),
+        new MainPopelushka(`Popelushka2`, 27, 45),
+        new MainPopelushka(`Popelushka3`, 18, 44),
+        new MainPopelushka(`Popelushka4`, 19, 33),
+        new MainPopelushka(`Popelushka5`, 44, 39),
+        new MainPopelushka(`Popelushka6`, 36, 38),
+        new MainPopelushka(`Popelushka7`, 24, 47),
+        new MainPopelushka(`Popelushka8`, 30, 36),
+        new MainPopelushka(`Popelushka9`, 21, 41),
+        new MainPopelushka(`Popelushka10`, 20, 40),
+    ]
+    console.log(ArrPopelushka);
+    function MainPrince(name, age, size){
+        this.name = name;
+        this.age = age;
+        this.size = size;
+    }
+    let Prince = new MainPrince(`Stas`, 23, 45);
+        console.log(Prince);
+
+    let Lover = (ArrPopelushka, Prince) => {
+        for (let arrPopelushkaElement of ArrPopelushka) {
+            if (arrPopelushkaElement.size === Prince.size) {
+                return `Your baby is ${arrPopelushkaElement.name}`
+            }
+            };
+
+        }
+        
+
+    console.log(Lover(ArrPopelushka, Prince))
+    let Lover2 = ArrPopelushka.find((girl) => girl.size === Prince.size)
+    console.log(Lover2)
+
+</script>
+</body>
+</html>
