@@ -1,10 +1,13 @@
 // - Напишіть код,  який за допомоги document.getElementById або document.getElementsByClassName або document.getElementsByTagName :
 // -- отримує текст з параграфа з id "content"
-let text1 = document.getElementById(`content`);
-console.log(text1);
+let text1 = document.querySelector(`#content`);
+let text1d = text1.textContent
+console.log(text1d);
+
 // -- отримує текст з блоку з id "rules"
-let text2 = document.getElementById(`rules`)
-console.log(text2);
+let text2 = document.querySelector(`#rules`)
+let text2d = text2.textContent
+console.log(text2d);
 // -- замініть текст параграфа з id 'content' на будь-який інший
  text1.innerText = `Pop Christmas Songs Playlist   Ariana Grande, Justin Bieber, Mariah Carey Christmas Songs  2021`
 // -- замініть текст параграфа з id 'rules' на будь-який інший
