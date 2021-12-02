@@ -143,13 +143,16 @@ let main_container = document.getElementsByClassName(`main`)[0]
 for (const course_element of coursesArray) {
     let block_course = document.createElement(`div`)
     block_course.classList.add(`block_course`)
+    let main_title = document.createElement(`div`)
+    main_title.classList.add(`main_title`)
+    main_title.textContent = course_element.title
     let type_duration = document.createElement(`div`)
     type_duration.classList.add(`title`)
 
     let course_title = document.createElement(`div`)
-    course_title.textContent = `Course: ${course_element.title}`
+    course_title.textContent = `Duration - ${course_element.monthDuration} month`
     let duration = document.createElement(`div`)
-    duration.textContent = `Duration - ${course_element.monthDuration} month`
+    duration.textContent = `include ${course_element.hourDuration} hours`
     let modules_ul = document.createElement(`ul`)
     let list = document.createElement(`div`)
     let text_p = document.createElement(`p`)
@@ -168,6 +171,7 @@ for (const course_element of coursesArray) {
 
 
     main_container.appendChild(block_course)
+    block_course.appendChild(main_title)
     block_course.appendChild(type_duration)
     type_duration.appendChild(course_title)
     type_duration.appendChild(duration)
