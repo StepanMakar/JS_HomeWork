@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .wrap{
+        margin-left: 30px;
+        margin-bottom: 50px;
+    }
+ .info1{
+    width: 400px;
+    text-align: center;
+
+}
+ .task1{
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+     width: 500px;
+
+     background-color: aquamarine;
+ }
+ .task2{
+     width: 300px;
+     height: 70px;
+     font-size: 20px;
+
+ }
+ .title{
+     cursor: pointer;
+ }
+ .menu.hide ul{
+     display: none;
+ }
+ .Song_block {
+     width: 300px;
+     border: 2px solid blue;
+     padding: 20px;
+ }
+ .Song_block.hidden p{
+     display: none;
+ }
+</style>
+
+<body>
+<div class="task1 wrap">
+    <div id="text" class="info1">
+        Элемент HTML input используется для создания интерактивных элементов управления в веб-формах для получения
+            данных от пользователя; в зависимости от устройства и user agent, доступен широкий выбор типов входных
+            данных и
+            виджетов управления. Из-за огромного количества возможных сочетаний типов ввода и атрибутов это один из
+            самых
+            мощных и сложных элементов HTML.
+    </div>
+    <button>Close</button>
+</div>
+<div class="wrap">
+    <button class="task2">Push me and I will disappear</button>
+</div>
+<div class="wrap">
+    <input type="text" id="age">
+    <input type="button" id="button2" value="Вкажіть вік для перевірки">
+</div>
+<div class="wrap menu">
+    <h2 class="title" >10 найкращих пісень для новорічного настрою</h2>
+    <ul>
+        <li>ЩЕДРИК</li>
+        <li>JINGLE BELLS</li>
+        <li>HAPPY NEW YEAR</li>
+        <li>We Wish You a Merry Christmas</li>
+        <li>LAST CHRISTMAS</li>
+        <li>All I Want for Christmas Is You.</li>
+        <li>Have Yourself a Merry Little Christmas.</li>
+    </ul>
+</div>
+</body>
+<script src="HW10.js"></script>
+</html>

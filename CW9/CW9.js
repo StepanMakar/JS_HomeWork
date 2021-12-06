@@ -167,9 +167,6 @@ for (const course_element of coursesArray) {
     }
 
 
-
-
-
     main_container.appendChild(block_course)
     block_course.appendChild(main_title)
     block_course.appendChild(type_duration)
