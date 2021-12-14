@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>liked</title>
+</head>
+<body>
+<script>
+    let liked = JSON.parse(localStorage.getItem(`favorite`))
+    for (const like of liked) {
+        let block_licked = document.createElement(`div`)
+        block_licked.innerText = `${like.name} - ${like.age} - ${like.status}`
+        document.body.append(block_licked)
+    }
+
+</script>
+</body>
+</html>
