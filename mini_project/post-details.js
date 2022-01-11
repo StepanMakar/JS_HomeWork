@@ -45,6 +45,7 @@ fetch(`https://jsonplaceholder.typicode.com/posts/` + id_post)
 
 
                     }
+                    button.disabled = true
                 })
 
         }

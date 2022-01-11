@@ -53,7 +53,9 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id_post}/posts`)
            }
 
 
+
        }
+       button.disabled = true
    }
 
     })})
