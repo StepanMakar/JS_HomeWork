@@ -6,140 +6,146 @@
 </head>
 <body>
 <script>
-    // 1 Створити змінні. Присвоїти кожному з них значення: 'hello','owu','com', 'ua', 1, 10, -999, 123, 3.14, 2.7, 16, true, false.
-    // Вивести кожну змінну за допомогою: console.log , alert, document.write
-    let a = `hello`
-    let b = `owu`
-    let c = `com`
-    let d = `ua`
-    let e = 1
-    let f = 10
-    let g = -999
-    let k = 123
-    let l = 3.14
-    let m = 2.7
-    let n = 16
-    let o = true
-    let p = false
-    console.log(a)
-    console.log(b)
-    console.log(c)
-    console.log(d)
-    console.log(e)
-    console.log(f)
-    console.log(g)
-    console.log(k)
-    console.log(l)
-    console.log(m)
-    console.log(n)
-    console.log(o)
-    console.log(p)
-    // alert(a)
-    // alert(b)
-    // alert(c)
-    // alert(d)
-    // alert(e)
-    // alert(g)
-    // alert(m)
-    // alert(o)
-    document.write(a)
-    document.write(b)
-    document.write(c)
-    document.write(d)
-    document.write(e)
-    document.write(g)
-    document.write(m)
-    document.write(o)
-    // 2 Переприсвоїти кожній змінній з завдання значення на довільне.
-    //   Вивести кожну змінну за допомогою: console.log , alert, document.write
-    a = `Harry`
-    b = `Potter`
-    c = `and`
-    d = `Secret`
-    e = `Chamber`
-    f = false
-    g = 10.01
-    k = 203
-    l = -457
-    m = -1.1
-    n = `stone`
-    o = -222
-    p = true
-    //
-    console.log(a)
-    console.log(b)
-    console.log(c)
-    console.log(d)
-    console.log(e)
-    console.log(f)
-    console.log(g)
-    console.log(k)
-    console.log(l)
-    console.log(m)
-    console.log(n)
-    console.log(o)
-    console.log(p)
-    document.write(a)
-    document.write(b)
-    document.write(c)
-    document.write(d)
-    document.write(e)
-    document.write(g)
-    document.write(m)
-    document.write(o)
-    // 3 Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ. З'єднати їх в одну змінну person.(Не об'єкт)
-    let firstName = `Stepan`
-    console.log(firstName)
-    let middleName = `Makar`
-    console.log(middleName)
-    let LastName = `Mykhailovych`
-    console.log(LastName)
-    console.log(`${firstName} ${middleName} ${LastName}`)
-
-    let person = [
-        {firstName: `Stepan`},
-        {middleName: `Makar`},
-        {LastName: `Mykhailovych`}
-
-    ];
-    console.log(person[0].firstName, person[1].middleName, person[2].LastName)
-    // 4.  За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками.  Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".
-    let firstNamee = prompt(`Enter your name`)
-    let middleNamee = prompt(`Enter you middle name`)
-    let age = prompt(`Enter your age`)
-    document.write(`Hello` + ` ` + firstNamee + middleNamee + ` ` + `You` + ` ` + age + ` ` + 'years');
-    // 5 - За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
-    let a1 = 100
-    let b1 = `100`
-    let c1 = true
-    console.log(typeof a1)
-    console.log(typeof b1)
-    console.log(typeof c1)
-    // 6 Визначити відповідний оператор в виразах що б вийшов відповідний результат.
-    //     В однакових виразах не використовувати однакові оператори!!!
-    console.log(5 < 6)
-    console.log(5 > 6)
-    console.log(5 == 6)
-    console.log(5 === 6)
-    console.log(10 == 10)
-    console.log(10 > 10)
-    console.log(10 < 10)
-    console.log(10 != 10)
-    console.log(123 === `123`)
-    console.log(123 == `123`)
-
-    // 7 Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
-    // let str = "20";
-    // let a = 5;
-    // document.write(str + a + "<br/>");        (1)
-    // document.write(str - a + "<br/>");           (2)
-    // document.write(str * "2" + "<br/>");         (3)
-    // document.write(str / 2 + "<br/>");           (4)
-
-    // 1 JavaScript автоматично перетворює Number(a) в String(str) тому вони злиються і вийде 205
-    // .....?
+//     // 1 Створити змінні. Присвоїти кожному з них значення: 'hello','owu','com', 'ua', 1, 10, -999, 123, 3.14, 2.7, 16, true, false.
+//     // Вивести кожну змінну за допомогою: console.log , alert, document.write
+//     let a = `hello`
+//     let b = `owu`
+//     let c = `com`
+//     let d = `ua`
+//     let e = 1
+//     let f = 10
+//     let g = -999
+//     let k = 123
+//     let l = 3.14
+//     let m = 2.7
+//     let n = 16
+//     let o = true
+//     let p = false
+//     console.log(a)
+//     console.log(b)
+//     console.log(c)
+//     console.log(d)
+//     console.log(e)
+//     console.log(f)
+//     console.log(g)
+//     console.log(k)
+//     console.log(l)
+//     console.log(m)
+//     console.log(n)
+//     console.log(o)
+//     console.log(p)
+//     // alert(a)
+//     // alert(b)
+//     // alert(c)
+//     // alert(d)
+//     // alert(e)
+//     // alert(g)
+//     // alert(m)
+//     // alert(o)
+//     document.write(a)
+//     document.write(b)
+//     document.write(c)
+//     document.write(d)
+//     document.write(e)
+//     document.write(g)
+//     document.write(m)
+//     document.write(o)
+//     // 2 Переприсвоїти кожній змінній з завдання значення на довільне.
+//     //   Вивести кожну змінну за допомогою: console.log , alert, document.write
+//     a = `Harry`
+//     b = `Potter`
+//     c = `and`
+//     d = `Secret`
+//     e = `Chamber`
+//     f = false
+//     g = 10.01
+//     k = 203
+//     l = -457
+//     m = -1.1
+//     n = `stone`
+//     o = -222
+//     p = true
+//     //
+//     console.log(a)
+//     console.log(b)
+//     console.log(c)
+//     console.log(d)
+//     console.log(e)
+//     console.log(f)
+//     console.log(g)
+//     console.log(k)
+//     console.log(l)
+//     console.log(m)
+//     console.log(n)
+//     console.log(o)
+//     console.log(p)
+//     document.write(a)
+//     document.write(b)
+//     document.write(c)
+//     document.write(d)
+//     document.write(e)
+//     document.write(g)
+//     document.write(m)
+//     document.write(o)
+//     // 3 Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ. З'єднати їх в одну змінну person.(Не об'єкт)
+//     let firstName = `Stepan`
+//     console.log(firstName)
+//     let middleName = `Makar`
+//     console.log(middleName)
+//     let LastName = `Mykhailovych`
+//     console.log(LastName)
+//     console.log(`${firstName} ${middleName} ${LastName}`)
 //
+//     let person = [
+//         {firstName: `Stepan`},
+//         {middleName: `Makar`},
+//         {LastName: `Mykhailovych`}
 //
+//     ];
+//     console.log(person[0].firstName, person[1].middleName, person[2].LastName)
+//     // 4.  За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками.  Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".
+//     let firstNamee = prompt(`Enter your name`)
+//     let middleNamee = prompt(`Enter you middle name`)
+//     let age = prompt(`Enter your age`)
+//     document.write(`Hello` + ` ` + firstNamee + middleNamee + ` ` + `You` + ` ` + age + ` ` + 'years');
+//     // 5 - За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
+//     let a1 = 100
+//     let b1 = `100`
+//     let c1 = true
+//     console.log(typeof a1)
+//     console.log(typeof b1)
+//     console.log(typeof c1)
+//     // 6 Визначити відповідний оператор в виразах що б вийшов відповідний результат.
+//     //     В однакових виразах не використовувати однакові оператори!!!
+//     console.log(5 < 6)
+//     console.log(5 > 6)
+//     console.log(5 == 6)
+//     console.log(5 === 6)
+//     console.log(10 == 10)
+//     console.log(10 > 10)
+//     console.log(10 < 10)
+//     console.log(10 != 10)
+//     console.log(123 === `123`)
+//     console.log(123 == `123`)
+//
+//     // 7 Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
+//     // let str = "20";
+//     // let a = 5;
+//     // document.write(str + a + "<br/>");        (1)
+//     // document.write(str - a + "<br/>");           (2)
+//     // document.write(str * "2" + "<br/>");         (3)
+//     // document.write(str / 2 + "<br/>");           (4)
+//
+//     // 1 JavaScript автоматично перетворює Number(a) в String(str) тому вони злиються і вийде 205
+//     // .....?
+// //
+// //
+
+let city = `Kyiv`
+console.log(city)
+city = 'Lviv'
+console.log(city)
+
 </script>
 </body>
 </html>
